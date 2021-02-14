@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="275.0" stylesheets="@../MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.settingsPanes.EnterprisePaneController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="51.0" prefWidth="275.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="enterpriseOptionsLabel" text="Opcje firmy">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="15.0" top="15.0" />
+         </padding>
+      </VBox>
+      <CheckBox fx:id="editDataCheckBox" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" text="Edytuj dane firmy" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="5.0" layoutY="111.0" pickOnBounds="false" prefHeight="200.0" prefWidth="265.0" vvalue="1.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="265.0" spacing="15.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="enterpriseNameLabel" text="Nazwa firmy">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="companyNameField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="streetLabel" text="Ulica">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="streetField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="118.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="cityLabel" text="Miasto">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cityField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="154.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="postalCodeLabel" text="Kod pocztowy">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="postalCodeField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="196.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="countryLabel" text="Kraj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="countryField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="187.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="phoneNumberLabel" text="Numer telefonu">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="phoneNumberField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="246.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="emailLabel" text="E-mail">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="emailField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="305.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="nipLabel" text="NIP">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nipField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="382.0" prefHeight="200.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label fx:id="regonLabel" text="REGON">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="regonField" disable="true" prefHeight="27.0" prefWidth="204.0" />
+                     </children>
+                     <padding>
+                        <Insets left="35.0" right="35.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" layoutY="334.0" prefHeight="66.0" prefWidth="275.0" spacing="15.0" stylesheets="@../MyTheme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="applyButton" mnemonicParsing="false" onAction="#handleApplyClick" prefHeight="36.0" prefWidth="95.0" styleClass="actionButtons" text="Zastosuj" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleCancelClick" prefHeight="36.0" prefWidth="95.0" styleClass="actionButtonsRed" text="Wróć" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

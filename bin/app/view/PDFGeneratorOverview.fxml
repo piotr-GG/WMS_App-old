@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" minHeight="663.0" minWidth="1280.0" prefHeight="900.0" prefWidth="1600.0" styleClass="progressiveLook" stylesheets="@MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.PDFGeneratorOverviewController">
+   <children>
+      <VBox layoutX="7.0" prefHeight="100.0" prefWidth="1600.0" spacing="5.0" styleClass="documentGeneratorVBOX" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Separator prefWidth="200.0" style="-fx-background-color: white;" />
+            <Label prefHeight="53.0" prefWidth="409.0" text="Generator dokumentów" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="25.0" right="35.0" top="15.0" />
+         </padding>
+      </VBox>
+      <AnchorPane layoutX="3.0" layoutY="105.0" prefHeight="585.0" prefWidth="1600.0" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="105.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="109.0" prefWidth="1068.0" spacing="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/action%20icons/pdf.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="55.0" prefWidth="622.0" text="Generator dokumentów">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="109.0" prefWidth="645.0">
+                     <children>
+                        <Label prefHeight="102.0" prefWidth="300.0" text="Generujemy dokumenty i jest fajnie!" wrapText="true" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <GridPane layoutX="384.0" layoutY="117.0" prefHeight="453.0" prefWidth="963.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="384.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="117.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="672.0" minWidth="10.0" prefWidth="618.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="214.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="97.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane alignment="CENTER_LEFT" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="generateWayBillRB" mnemonicParsing="false" text="Wygeneruj krajowy list przewozowy">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </RadioButton>
+                        <HBox fx:id="generateWayBillOptionsVBox" alignment="BOTTOM_CENTER" prefHeight="7.0" prefWidth="467.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="93.0" text="Dokumenty:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Label>
+                              <HBox alignment="BOTTOM_CENTER" prefHeight="19.0" prefWidth="160.0" spacing="35.0">
+                                 <children>
+                                    <CheckBox fx:id="mrnT1WayBillCheckBox" mnemonicParsing="false" text="MRN/T1">
+                                       <padding>
+                                          <Insets top="2.0" />
+                                       </padding>
+                                    </CheckBox>
+                                    <CheckBox fx:id="invoiceWayBillCheckBox" mnemonicParsing="false" text="Invoice">
+                                       <padding>
+                                          <Insets top="2.0" />
+                                       </padding>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <RadioButton fx:id="generateOrderInvoiceRB" mnemonicParsing="false" text="Wygeneruj fakturę zamówienia" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </RadioButton>
+                  <RadioButton fx:id="generateDeliveryInvoiceRB" mnemonicParsing="false" text="Wygeneruj potwierdzenie przyjęcia dostawy" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </RadioButton>
+                  <StackPane alignment="CENTER_LEFT" GridPane.rowIndex="4">
+                     <children>
+                        <RadioButton fx:id="generateCMRRB" mnemonicParsing="false" text="Wygeneruj dokument CMR">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </RadioButton>
+                        <HBox fx:id="generateCMROptionsVBox" alignment="BOTTOM_CENTER" prefHeight="7.0" prefWidth="467.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="93.0" text="Dokumenty:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </Label>
+                              <HBox alignment="BOTTOM_CENTER" prefHeight="19.0" prefWidth="160.0" spacing="35.0">
+                                 <children>
+                                    <CheckBox fx:id="mrnT1CMRCheckBox" mnemonicParsing="false" text="MRN/T1">
+                                       <padding>
+                                          <Insets top="2.0" />
+                                       </padding>
+                                    </CheckBox>
+                                    <CheckBox fx:id="invoiceCMRCheckBox" mnemonicParsing="false" text="Invoice">
+                                       <padding>
+                                          <Insets top="2.0" />
+                                       </padding>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <VBox fx:id="generateWayBillVBox" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Podaj ID wysyłki:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="generateWayBillField" maxWidth="300.0" promptText="ID wysyłki" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="generateOrderInvoiceVBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Podaj ID zamówienia:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="generateOrderInvoiceField" maxWidth="300.0" promptText="ID zamówienia" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="generateDeliveryInvoiceVBox" alignment="CENTER" prefHeight="72.0" prefWidth="450.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="Podaj ID dostawy:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="generateDeliveryInvoiceField" maxWidth="300.0" promptText="ID dostawy" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="generateCMRVBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label text="Podaj ID wysyłki:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="generateCMRField" maxWidth="300.0" promptText="ID wysyłki" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="40.0" prefWidth="467.0" spacing="5.0">
+                     <children>
+                        <Label text="Dokumenty magazynowe">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="114.0" prefWidth="964.0" GridPane.rowIndex="5">
+                     <children>
+                        <Button fx:id="executeButton" mnemonicParsing="false" onAction="#handleExecuteClick" prefHeight="53.0" prefWidth="143.0" styleClass="actionButtons" text="Generuj" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="836.0" onMouseClicked="#handleArrowClick" pickOnBounds="true" preserveRatio="true" styleClass="arrows" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
+         <image>
+            <Image url="@images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.UserActionOverviewController">
+   <children>
+      <GridPane fx:id="mainPane" prefHeight="900.0" prefWidth="1600.0" styleClass="progressiveLook" stylesheets="@MyTheme.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="264.0" minHeight="10.0" prefHeight="143.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1411.0" minHeight="10.0" prefHeight="698.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="895.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox>
+               <children>
+                  <Label fx:id="userPanelLabel" text="Panel użytkownika">
+                     <font>
+                        <Font name="Arial Black" size="23.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="0.0" prefWidth="1561.0" />
+                  <Label fx:id="userPanelTextLabel" text="Najedź myszką na ikonę akcji, aby zobaczyć jej nazwę oraz przytrzymaj myszkę na nazwie akcji, aby zobaczyć opis konkretnej akcji.">
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="25.0" right="25.0" top="45.0" />
+               </GridPane.margin>
+            </VBox>
+            <GridPane alignment="CENTER" prefHeight="693.0" prefWidth="1611.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <FlowPane alignment="CENTER" GridPane.halignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="pdfGeneratorLabel" styleClass="actionLabel" text="Generator PDF">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="pdfGeneratorToolTip" text="Wygeneruj dokumenty gospodarki magazynowej" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="pdfGeneratorIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handlePDFGeneratorClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/pdf.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="communicationLabel" styleClass="actionLabel" text="Komunikacja">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="communicationTooltip" text="Komunikacja z innymi użytkownikami programu" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="communicationIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleUserInteractionClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/communication.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="185.0" prefWidth="150.0" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="locationLabel" alignment="CENTER" ellipsisString="" onMouseClicked="#handleWarehouseManagementClick" prefHeight="25.0" prefWidth="100.0" styleClass="actionLabel" text="Lokacje" textAlignment="CENTER" textOverrun="CLIP">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="locationTooltip" text="Kwerendy dotyczące lokacji magazynowych" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="locationIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleWarehouseManagementClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/warehouse-map.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="productsLabel" styleClass="actionLabel" text="Produkty">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="productsTooltip" text="Akcje i kwerendy związane z produktami oraz kategoriami" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="productsIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleProductQueriesClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/product.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="orderLabel" styleClass="actionLabel" text="Zamówienia">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="orderTooltip" text="Akcje, kwerendy dotyczące obiegu zamówień w magazynie" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="ordersIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleOrdersClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/orders.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="deliveriesLabel" styleClass="actionLabel" text="Dostawy">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="deliveryTooltip" text="Akcje oraz kwerendy związane z przyjmowaniem dostaw " />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="deliveriesIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleDeliveryClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/delivery.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="shippingLabel" styleClass="actionLabel" text="Spedycja">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="shippingTooltip" text="Kwerendy związane z zakończoną spedycją wysyłek" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="shippingIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleShippingClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/earth.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="whAttendantPanelLabel" styleClass="actionLabel" text="Panel magazyniera">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="whAttendantPanelTooltip" text="Akcje usprawniające przepływ informacji podczas kompletacji zamówień" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="whAttendantIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleWarehouseAttendantClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/picking.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <children>
+                        <VBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+                           <children>
+                              <Label fx:id="chartsLabel" styleClass="actionLabel" text="Wykresy">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip fx:id="chartsTooltip" text="Generowanie wykresów z istniejących danych w programie" />
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="chartsIcon" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleDrawChartsClick" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/action%20icons/charts.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@../MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.menuItemDialogs.IntroductoryMovieDialogController">
+   <children>
+      <Button layoutX="258.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleReturnClick" prefHeight="33.0" prefWidth="85.0" styleClass="actionButtons" text="Wróć" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <VBox prefHeight="0.0" prefWidth="500.0">
+         <children>
+            <Label text="Film wprowadzający">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,291 @@
+.loginView{
+	-fx-image: url("images/login.png");
+}
+
+.loginView:hover{
+	-fx-image: url("images/login-hover.png");
+	-fx-cursor: HAND;
+	-fx-scale-x: 1.15;
+	-fx-scale-y: 1.15;
+}
+
+.registerView{
+	-fx-image: url("images/register.png");
+}
+
+.registerView:hover{
+	-fx-image: url("images/register-hover.png");
+	-fx-cursor: HAND;
+	-fx-scale-x: 1.15;
+	-fx-scale-y: 1.15;
+}
+
+.footer{
+	-fx-background-color: #eeeeee;
+	-fx-background-radius: 5px 5px 0px 0px;
+}
+
+.actionImage:hover{
+	-fx-scale-x: 1.2;
+	-fx-scale-y: 1.2;
+	-fx-cursor: HAND;
+}
+
+.actionLabel {
+	visibility: false;
+}
+
+.actionImage:hover .actionLabel{
+	visibility: true;
+}
+
+
+
+.hBoxUser .userImage{
+
+}
+
+.hBoxUser:hover .userImage{
+
+}
+
+.countryIcon{
+	-fx-effect: none;
+}
+
+.countryIcon:hover{
+	-fx-effect: dropshadow(three-pass-box, #000000, 10.0, 0.0, 0.0, 0.0);
+	-fx-cursor: HAND;
+}
+
+.arrows{
+	-fx-effect: none;
+}
+
+.arrows:hover{
+	-fx-effect: dropshadow(three-pass-box, #4d0707, 10.0, 0.5, 0.0, 0.0);
+	-fx-cursor: HAND;
+}
+
+.title .text .msgLabelText{
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+}
+
+.vboxTab{
+	-fx-border-radius: 5px 5px 5px 5px;
+	-fx-border-width: 1px;
+	-fx-border-color: #cccccc;
+}
+
+.showMyPermissions{
+	-fx-background-color: none;
+}
+
+.showMyPermissions:hover{
+	-fx-cursor: hand;
+	-fx-font-weight: bold;
+	-fx-text-fill: #8934fa;
+	}
+	
+	
+.myProfilePhoto{
+	
+}
+
+.myProfilePhoto:hover{
+	-fx-cursor: hand;
+	-fx-effect: dropshadow(three-pass-box, #000000, 10.0, 0.0, 0.0, 0.0);
+}
+
+.actionButtons{
+	-fx-base: #4CAF50;
+}
+
+.actionButtons:hover{
+	-fx-base: #33A830;
+}
+
+.actionButtonsRed{
+	-fx-base: #AF4C50;
+}
+
+.adminPanelPane{
+	-fx-base : #E0FFFF;
+}
+
+.adminPanelLabel{
+	-fx-background-color : #4CAF50;
+	-fx-background-radius: 0px 0px 7px 7px;
+	-fx-text-fill : white;
+}
+
+.actionPanelVBox{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, green 100%);
+	-fx-background-radius:  7px;
+	-fx-base:  #4CAF50;
+}
+
+.greenTableLook{
+	-fx-body-color:  #4CAF50;
+	
+}
+
+.greenTableLook .placeholder{
+	-fx-text-background-color: black;
+}
+
+
+.table-column .label{
+ -fx-padding : 5px 0.0px 5px 0px;
+ -fx-text-background-color: white;
+}
+
+
+.yellowButton{
+	-fx-base : #ffff56;
+}
+
+.blueButton{
+	-fx-base: #5656ff;
+}
+
+.combo-box .list-view {
+	-fx-base : #efefef;
+}
+
+.combo-box-base{
+	-fx-body-color: white;
+	-fx-inner-border: #ececec;
+} 
+
+.combo-box-base>*.arrow-button{
+	-fx-background-color: #efefef;
+	-fx-color: #ececec;
+	-fx-border-color: derive(#ececec, -35%);
+	-fx-border-radius: 2.5px;
+}
+
+.text-field{
+	-fx-border-color: derive(#ececec, -23%);
+}
+.combo-box .list-cell:selected:empty{
+
+}
+
+.userInteractionVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, derive(IndianRed  , -15%) 0%, -fx-base  100%);
+	-fx-background-radius:  7px;
+	-fx-base:  derive(FireBrick  , -25%);
+}
+
+.productsVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, #FF2104 100%);
+	-fx-background-radius:  7px;
+	-fx-base:  #121212;
+
+}
+
+.messageLabel{
+	-fx-text-fill : white;
+}
+
+.messages{
+	-fx-text-fill : black;
+}
+
+.messages .titled-pane > .title {
+  -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+  -fx-background-insets: 0, 1, 2;
+  -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+  -fx-padding: 4px; /* 2 14 3 0 */
+  -fx-color: -fx-focus-color;
+}
+
+.messages .titled-pane > .title > .arrow-button .arrow {
+  -fx-background-color: white;
+}
+
+.detailsGPane{
+	-fx-border-radius: 5px;
+	-fx-border-width: 1px;
+	-fx-border-color: black;
+	-fx-padding: 10px; 
+}
+.detailsGPane .label .text{
+	-fx-font-size : 16px;
+}
+
+.detailsGPaneLabel{
+	-fx-font-weight: bold;
+}
+
+.whmanagementVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, black 100%);
+	-fx-background-radius:  7px;
+	-fx-base:  grey;
+}
+
+.shippingVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, #ececec 100%);
+	-fx-background-radius:  7px;
+	-fx-base:  #355c56;
+}
+
+.deliveriesVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, #cccccc 100%);
+	-fx-background-radius:  7px;
+	-fx-base: 		#008080;
+}
+
+.ordersVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, #00FFFF 100%);
+	-fx-background-radius:  7px;
+	-fx-base: 		#008B8B;
+}
+
+.drawChartsVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, #FF8C00 100%);
+	-fx-background-radius:  7px;
+	-fx-base: #A52A2A;
+}
+
+.documentGeneratorVBOX{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%,  FireBrick 100%);
+	-fx-background-radius:  7px;
+	-fx-base: DarkRed;
+}
+
+.wrongInputEffect{
+	-fx-effect: dropshadow(three-pass-box, #ff0000, 10.0, 0.0, 0.0, 0.0);
+}
+
+.orderAvailable{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, FloralWhite  100%);
+	-fx-background-radius:  7px;
+	-fx-border-width: 0.5px;
+	-fx-border-color: #cccccc;
+	-fx-border-radius : 7px;
+	-fx-base: Cornsilk;
+}
+
+.orderAvailable:selected{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -fx-base 0%, derive(FloralWhite, -10%)  100%);
+	-fx-base: derive(Cornsilk, -10%);
+}
+
+.progressiveLook{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, derive(#ececec,-2%) 0%, derive(#ececec, -5%) 50%, derive(#ececec, -2%) 100%);
+}
+
+.dragOver{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #eeeeee  0%, derive(#eeeeee , -5%)  100%);
+	-fx-border-color: #cccccc ;
+	-fx-border-width: 2px;
+	-fx-background-radius: 20px;
+	-fx-border-radius: 20px;
+}
+
+.dragOverHover{
+	-fx-effect : innershadow(three-pass-box, #000000, 10.0, 0.0, 0.0, 0.0) ;
+}

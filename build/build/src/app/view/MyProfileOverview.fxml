@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="575.0" prefWidth="600.0" stylesheets="@MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.MyProfileOverviewController">
+   <children>
+      <ScrollPane layoutX="54.0" layoutY="177.0" prefHeight="300.0" prefWidth="517.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="177.0">
+         <content>
+            <VBox spacing="10.0">
+               <children>
+                  <RadioButton fx:id="editEmployeeRB" mnemonicParsing="false" onAction="#handleEditEmployeeSelected" text="Chcę edytować dane pracownika">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <GridPane hgap="10.0" prefHeight="422.0" prefWidth="492.0" vgap="5.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="372.0" minWidth="10.0" prefWidth="215.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="277.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="nameTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="surnameTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="postitionCBox" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" prefWidth="282.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="departmentTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="birthDateDP" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" prefWidth="312.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <DatePicker fx:id="hireDateDP" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="addressTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="cityTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="postalCodeTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="countryTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <TextField fx:id="phoneNumberTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="emailTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Imię:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Nazwisko: " GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Stanowisko:" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Dział:" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Data urodzenia:" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Data zatrudnienia:" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Adres:" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Miasto:" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Kraj:" GridPane.rowIndex="9">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Numer telefonu:" GridPane.rowIndex="10">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Adres e-mail:" GridPane.rowIndex="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Kod pocztowy:" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <RadioButton fx:id="editUserRB" mnemonicParsing="false" onAction="#handleEditUserSelected" text="Chcę edytować dane użytkownika">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <GridPane hgap="10.0" prefHeight="90.0" prefWidth="492.0" vgap="5.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.0" minWidth="10.0" prefWidth="222.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="280.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Nazwa użytkownika:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Hasło:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="303.0" text="Powtórz hasło:" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="userNameTF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" />
+                        <PasswordField fx:id="passwordPF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="repeatPasswordPF" disable="true" maxHeight="-Infinity" minHeight="20.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Label fx:id="nameLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="24.0" prefHeight="47.0" prefWidth="398.0" text="Pracownik" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="62.0" prefHeight="18.0" prefWidth="288.0" />
+      <ImageView fx:id="photoIMG" fitHeight="128.0" fitWidth="128.0" layoutX="411.0" layoutY="40.0" onMouseClicked="#handlePhotoClick" pickOnBounds="true" styleClass="myProfilePhoto">
+         <image>
+            <Image url="@images/rick%20ross.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="OKButton" layoutX="249.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleOKClick" prefHeight="37.0" prefWidth="106.0" styleClass="actionButtons" text="OK" textFill="WHITE" AnchorPane.bottomAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button alignment="CENTER_RIGHT" layoutX="400.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleShowPermissionsClick" prefHeight="25.0" prefWidth="177.0" styleClass="showMyPermissions" text="Pokaż uprawnienia" AnchorPane.bottomAnchor="25.0">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Text layoutX="34.0" layoutY="105.0" lineSpacing="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W celu zmiany zdjęcia profilowego proszę kliknąć na zdjęcie i wybrać odpowiedni plik w formacie graficznym do zapisu." textAlignment="JUSTIFY" wrappingWidth="366.0000059604645" />
+   </children>
+</AnchorPane>

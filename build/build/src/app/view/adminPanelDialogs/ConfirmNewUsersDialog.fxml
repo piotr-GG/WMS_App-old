@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.adminPanelDialogs.ConfirmNewUsersDialogController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="900.0" spacing="15.0">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../images/confirm%20user.png" />
+               </image>
+            </ImageView>
+            <Label text="Potwierdź nowych użytkowników">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="18.0" layoutY="140.0" prefHeight="441.0" prefWidth="882.0" spacing="45.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+         <children>
+            <TableView fx:id="userTable" editable="true" minHeight="200.0" minWidth="500.0" prefHeight="350.0" prefWidth="800.0" styleClass="greenTableLook">
+               <placeholder>
+                  <Label text="Brak użytkowników do wyświetlenia." />
+              </placeholder>
+               <columns>
+                  <TableColumn fx:id="userID" prefWidth="107.0" resizable="false" text="ID użytkownika" />
+                  <TableColumn fx:id="login" prefWidth="132.33331298828125" resizable="false" text="Login" />
+                  <TableColumn fx:id="password" minWidth="0.0" prefWidth="154.33334350585938" resizable="false" text="Hasło" />
+                  <TableColumn fx:id="userFirstName" prefWidth="119.33331298828125" resizable="false" text="Imię " />
+                  <TableColumn fx:id="userLastName" prefWidth="140.33331298828125" resizable="false" text="Nazwisko" />
+                  <TableColumn fx:id="departmentNameColumn" prefWidth="246.66668701171875" text="Dział" />
+               </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="900.0" spacing="25.0">
+               <children>
+                  <Button minHeight="35.0" minWidth="95.0" mnemonicParsing="false" onAction="#handleConfirmUser" prefHeight="46.0" prefWidth="125.0" styleClass="actionButtons" text="Potwierdź" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button minHeight="35.0" minWidth="95.0" mnemonicParsing="false" onAction="#handleRejectUser" prefHeight="46.0" prefWidth="125.0" styleClass="actionButtonsRed" text="Odrzuć" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button minHeight="35.0" minWidth="95.0" mnemonicParsing="false" onAction="#handleGetBackClick" prefHeight="46.0" prefWidth="125.0" text="Wróć">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

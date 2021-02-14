@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@../MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.menuItemDialogs.DevelopersDialogController">
+   <children>
+      <VBox prefHeight="19.0" prefWidth="400.0" spacing="5.0">
+         <children>
+            <Label text="Twórcy">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="15.0" top="15.0" />
+         </padding>
+      </VBox>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="25.0" layoutY="63.0" prefHeight="440.0" prefWidth="757.0" vvalue="0.38">
+         <content>
+            <VBox fx:id="vBox" prefHeight="1500.0" prefWidth="757.0" spacing="25.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label text="Piotr Gałecki">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label text="Piotr Gałecki #1">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="210.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label text="Piotr Gałecki #2">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="410.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label text="Piotr Gałecki #3">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="689.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label text="Piotr Gałecki #4">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="1055.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label text="Podziękowania dla :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                           <children>
+                              <Label text="Piotra Gałeckiego">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Piotra Gałeckiego">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Piotra Gałeckiego">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button layoutX="687.0" layoutY="542.0" mnemonicParsing="false" onAction="#handlePlayClick" prefHeight="17.0" prefWidth="86.0" styleClass="actionButtons" text="Pokaz" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="350.0" layoutY="542.0" mnemonicParsing="false" onAction="#handleReturnClick" prefHeight="45.0" prefWidth="100.0" styleClass="actionButtons" text="Wróć" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <HBox alignment="CENTER" layoutX="591.0" layoutY="511.0" spacing="10.0">
+         <children>
+            <Label text="Długość pokazu [s]:" />
+            <TextField fx:id="durationField" prefHeight="27.0" prefWidth="68.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

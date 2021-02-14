@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="706.0" prefWidth="1600.0" stylesheets="@../MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.deliveryPanes.PlaceDeliveryPaneController">
+   <children>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="682.0" prefWidth="1584.0" spacing="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <VBox minHeight="75.0" prefHeight="113.0" prefWidth="600.0" spacing="5.0">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <children>
+                              <Label text="Nowe zlecenie dostawy">
+                                 <font>
+                                    <Font name="System Italic" size="22.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding>
+                              </Label>
+                              <Separator prefWidth="200.0" />
+                              <Label prefHeight="44.0" prefWidth="585.0" text="W celu utworzenia nowego zlecenia dostawy proszę dodać do tabeli wybrane produkty oraz wybrać dostawcę, u którego nowe zamówienie ma zostać złożone." wrapText="true" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="509.0" prefWidth="779.0" spacing="10.0">
+                           <children>
+                              <Label text="Tabela produktów">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="productTable_PT" minHeight="250.0" prefHeight="480.0" prefWidth="750.0" styleClass="greenTableLook">
+                              	<placeholder>
+                              		<Label text="W celu utworzenia nowej dostawy proszę dodać produkty do tabeli i określić dostawcę." />
+                          		</placeholder>
+                                 <columns>
+                                    <TableColumn prefWidth="150.0" text="Produkt">
+                                       <columns>
+                                          <TableColumn fx:id="productIDColumn_PT" prefWidth="111.0" text="ID produktu" />
+                                          <TableColumn fx:id="productNameColumn_PT" minWidth="0.0" prefWidth="385.0" text="Nazwa produktu" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn fx:id="orderedQuantityColumn_PT" prefWidth="75.0" text="Zamówiona ilość" />
+                                    <TableColumn fx:id="unitPriceColumn_PT" prefWidth="75.0" text="Cena jednostkowa" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                           <opaqueInsets>
+                              <Insets left="20.0" />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="749.0" spacing="50.0">
+                     <children>
+                        <AnchorPane fx:id="dragNDropPane" prefHeight="50.0" prefWidth="155.0" styleClass="dragOver" stylesheets="@../MyTheme.css">
+                           <children>
+                              <Label fx:id="dragNDropLabel" layoutX="33.0" layoutY="17.0" prefHeight="25.0" prefWidth="114.0" text="Usuń produkt" textFill="#6b0000" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="388.0" spacing="15.0">
+                           <children>
+                              <Label text="Wymagana data dostawy:">
+                                 <font>
+                                    <Font name="System Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="13.0" />
+                              <DatePicker fx:id="deliveryDatePicker" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="682.0" prefWidth="688.0" spacing="25.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="112.0" prefWidth="567.0" spacing="25.0">
+                     <children>
+                        <Label text="Akcje">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <Button minHeight="32.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleAddProductClick" prefHeight="37.0" prefWidth="136.0" styleClass="actionButtons" text="Dodaj produkt" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="176.0" layoutY="42.0" minHeight="32.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleRemoveProductClick" prefHeight="37.0" prefWidth="135.0" styleClass="actionButtonsRed" text="Usuń produkt" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="119.0" layoutY="42.0" minHeight="32.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleAddSupplierClick" prefHeight="37.0" prefWidth="140.0" styleClass="actionButtons" text="Dodaj dostawcę" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button minHeight="32.0" minWidth="100.0" mnemonicParsing="false" onAction="#handleRemoveSupplierClick" prefHeight="37.0" prefWidth="126.0" styleClass="actionButtonsRed" text="Usuń dostawcę" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="274.0" prefWidth="414.0" spacing="15.0">
+                     <children>
+                        <Label text="Dane dostawcy">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                        <GridPane alignment="CENTER" hgap="10.0" prefHeight="144.0" prefWidth="523.0" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="192.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="147.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label minWidth="18.0" text="Nazwa firmy dostawcy:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label minWidth="18.0" text="Przedstawiciel firmy:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label minWidth="18.0" text="Miasto dostawcy:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="supplierCompanyNameTF" minWidth="23.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="supplierRepresentativeNameTF" minWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="supplierCityTF" minWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label minWidth="18.0" text="Kraj dostawcy:" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="supplierCountryTF" minWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Button minWidth="45.0" mnemonicParsing="false" onAction="#handleInsertOrderClick" prefHeight="57.0" prefWidth="188.0" styleClass="actionButtons" text="Wprowadź zlecenie" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

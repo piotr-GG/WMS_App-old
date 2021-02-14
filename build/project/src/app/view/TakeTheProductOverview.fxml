@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="669.0" prefWidth="600.0" stylesheets="@MyTheme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.TakeTheProductOverviewController">
+   <children>
+      <VBox prefHeight="48.0" prefWidth="600.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Przyjmij produkt">
+               <font>
+                  <Font name="System Italic" size="29.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="20.0" layoutY="90.0" prefHeight="567.0" prefWidth="550.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="30.0">
+         <children>
+            <GridPane hgap="5.0" prefHeight="120.0" prefWidth="346.0" vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="249.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="98.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID dostawy:">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nazwa produktu:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Ilość do przyjęcia:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="deliveryIDField" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="productNameField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="quantityToBeDistributedField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Separator prefHeight="3.0" prefWidth="484.0" />
+            <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="364.0" prefWidth="550.0">
+               <content>
+                  <VBox fx:id="locationVBOX" alignment="CENTER" prefHeight="443.0" prefWidth="538.0" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" spacing="10.0" styleClass="actionImage">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#handleAddNewLocation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/add.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Dodaj lokalizację">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleOKClick" onMouseClicked="#handleOKClick" prefHeight="32.0" prefWidth="76.0" text="Akceptuj" />
+                  <Button mnemonicParsing="false" onAction="#handleGetBackClick" prefHeight="32.0" prefWidth="76.0" text="Wróć" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

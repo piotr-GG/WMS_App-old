@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<project name="Thesis" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
+	<target name="init-fx-tasks">
+		<path id="fxant">
+			<filelist>
+				<file name="${java.home}\..\lib\ant-javafx.jar"/>
+				<file name="${java.home}\lib\jfxrt.jar"/>
+			</filelist>
+		</path>
+	
+		<taskdef resource="com/sun/javafx/tools/ant/antlib.xml"
+			uri="javafx:com.sun.javafx.tools.ant"
+			classpathref="fxant"/>
+	</target>
+	<target name="setup-staging-area">
+		<delete dir="externalLibs" />
+		<delete dir="project" />
+		<delete dir="projectRefs" />
+	
+		<mkdir dir="externalLibs" />
+	
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itextpdf-5.5.9-javadoc.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itext-pdfa-5.5.9-javadoc.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\apache poi\stax\stax-api\1.0.1">
+				<filename name="stax-api-1.0.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itext-xtra-5.5.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="xmlworker-5.5.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\apache poi\poi\poi-ooxml\3.11-beta2">
+				<filename name="poi-ooxml-3.11-beta2.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis">
+				<filename name="jxls-2.3.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\apache poi\poi\poi\3.11-beta2">
+				<filename name="poi-3.11-beta2.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itext-xtra-5.5.9-javadoc.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\apache poi\xmlbeans\xmlbeans\2.6.0">
+				<filename name="xmlbeans-2.6.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itext-pdfa-5.5.9-sources.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itextpdf-5.5.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\apache poi\commons-codec\commons-codec\1.9">
+				<filename name="commons-codec-1.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="xmlworker-5.5.9-sources.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis">
+				<filename name="mysql-connector-java-5.1.39-bin.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\apache poi\poi\poi-ooxml-schemas\3.11-beta2">
+				<filename name="poi-ooxml-schemas-3.11-beta2.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\apache poi\xbean\xbean-reflect\3.4">
+				<filename name="xbean-reflect-3.4.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itext-pdfa-5.5.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="xmlworker-5.5.9-javadoc.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itextpdf-5.5.9-sources.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis">
+				<filename name="sqlite-jdbc-3.8.11.2.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis\iText 5.5.9">
+				<filename name="itext-xtra-5.5.9-sources.jar"/>
+			</fileset>
+		</copy>
+	
+		<mkdir dir="project" />
+		<copy todir="project">
+			<fileset dir="C:\Users\Piotrek\workspace\Thesis">
+				<include name="src/**" />
+			</fileset>
+		</copy>
+	
+		<mkdir dir="projectRefs" />
+	</target>
+	<target name='do-compile'>
+		<delete dir="build" />
+		<mkdir dir="build/src" />
+		<mkdir dir="build/libs" />
+		<mkdir dir="build/classes" />
+	
+		<!-- Copy project-libs references -->
+		<copy todir="build/libs">
+			<fileset dir="externalLibs">
+				<include name="poi-3.11-beta2.jar"/>
+				<include name="xmlworker-5.5.9.jar"/>
+				<include name="stax-api-1.0.1.jar"/>
+				<include name="mysql-connector-java-5.1.39-bin.jar"/>
+				<include name="jxls-2.3.0.jar"/>
+				<include name="itext-pdfa-5.5.9-sources.jar"/>
+				<include name="itext-xtra-5.5.9-javadoc.jar"/>
+				<include name="itextpdf-5.5.9-sources.jar"/>
+				<include name="itext-pdfa-5.5.9.jar"/>
+				<include name="itext-xtra-5.5.9-sources.jar"/>
+				<include name="sqlite-jdbc-3.8.11.2.jar"/>
+				<include name="xmlworker-5.5.9-javadoc.jar"/>
+				<include name="itextpdf-5.5.9.jar"/>
+				<include name="xmlbeans-2.6.0.jar"/>
+				<include name="itextpdf-5.5.9-javadoc.jar"/>
+				<include name="commons-codec-1.9.jar"/>
+				<include name="poi-ooxml-schemas-3.11-beta2.jar"/>
+				<include name="itext-xtra-5.5.9.jar"/>
+				<include name="poi-ooxml-3.11-beta2.jar"/>
+				<include name="xbean-reflect-3.4.jar"/>
+				<include name="itext-pdfa-5.5.9-javadoc.jar"/>
+				<include name="xmlworker-5.5.9-sources.jar"/>
+			</fileset>
+		</copy>
+	
+		<!-- Copy project references -->
+	
+		<!-- Copy project sources itself -->
+		<copy todir="build/src">
+			<fileset dir="project/src">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+	
+		<javac includeantruntime="false" source="1.8" target="1.8" srcdir="build/src" destdir="build/classes" encoding="Cp1250">
+			<classpath>
+				<fileset dir="build/libs">
+					<include name="*"/>
+				</fileset>
+			</classpath>
+		</javac>
+	
+		<!-- Copy over none Java-Files -->
+		<copy todir="build/classes">
+		<fileset dir="project/src">
+			<exclude name="**/*.java"/>
+		</fileset>
+		</copy>
+	
+	
+	</target>
+	<target name="do-deploy" depends="setup-staging-area, do-compile, init-fx-tasks">
+		<delete file="dist"/>
+		<delete file="deploy" />
+	
+		<mkdir dir="dist" />
+		<mkdir dir="dist/libs" />
+	
+		<copy todir="dist/libs">
+			<fileset dir="externalLibs">
+				<include name="*" />
+			</fileset>
+		</copy>
+	
+	
+		<fx:resources id="appRes">
+			<fx:fileset dir="dist" includes="Thesis.jar"/>
+			<fx:fileset dir="dist" includes="libs/*"/>
+		</fx:resources>
+	
+		<fx:application id="fxApplication"
+			name="ForkLift WMS"
+			mainClass="app.MainApp"
+		/>
+	
+		<mkdir dir="build/classes/META-INF" />
+	
+	
+	
+		<fx:jar destfile="dist/Thesis.jar">
+			<fx:application refid="fxApplication"/>
+			<fileset dir="build/classes">
+			</fileset>
+			<fx:resources refid="appRes"/>
+	
+			<manifest>
+				<attribute name="Implementation-Vendor" value="Piotr Ga³ecki"/>
+				<attribute name="Implementation-Title" value="ForkLift WMS"/>
+				<attribute name="Implementation-Version" value="1.0.0"/>
+				<attribute name="JavaFX-Feature-Proxy" value="None"/>
+			</manifest>
+		</fx:jar>
+	
+	
+		<mkdir dir="deploy" />
+		<!-- Need to use ${basedir} because somehow the ant task is calculating the directory differently -->
+		<fx:deploy
+			embedJNLP="false"
+			extension="false"
+			includeDT="false"
+			offlineAllowed="true"
+			outdir="${basedir}/deploy"
+			outfile="Thesis" nativeBundles="exe"
+			updatemode="background" >
+	
+			<fx:platform basedir="${java.home}"/>
+			<fx:info title="Thesis" vendor="Piotr Ga³ecki"/>
+	
+			<fx:application refId="fxApplication"/>
+			<fx:resources refid="appRes"/>
+		</fx:deploy>
+	
+		<fx:csstobin outdir="build/classes">
+			<fileset dir="build/classes" includes="**/*.css"/>
+		</fx:csstobin>
+	
+	</target>
+</project>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Thesis.jnlp">
+  <information>
+    <title>Thesis</title>
+    <vendor>Piotr Galecki</vendor>
+    <description>ForkLift WMS</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Thesis.jar" size="4022285" download="eager" />
+    <jar href="libs\commons-codec-1.9.jar" size="263965" download="eager" />
+    <jar href="libs\itext-pdfa-5.5.9-javadoc.jar" size="476210" download="eager" />
+    <jar href="libs\itext-pdfa-5.5.9-sources.jar" size="126192" download="eager" />
+    <jar href="libs\itext-pdfa-5.5.9.jar" size="117922" download="eager" />
+    <jar href="libs\itext-xtra-5.5.9-javadoc.jar" size="364739" download="eager" />
+    <jar href="libs\itext-xtra-5.5.9-sources.jar" size="128778" download="eager" />
+    <jar href="libs\itext-xtra-5.5.9.jar" size="119941" download="eager" />
+    <jar href="libs\itextpdf-5.5.9-javadoc.jar" size="5554301" download="eager" />
+    <jar href="libs\itextpdf-5.5.9-sources.jar" size="2344632" download="eager" />
+    <jar href="libs\itextpdf-5.5.9.jar" size="2287148" download="eager" />
+    <jar href="libs\jxls-2.3.0.jar" size="112773" download="eager" />
+    <jar href="libs\mysql-connector-java-5.1.39-bin.jar" size="989497" download="eager" />
+    <jar href="libs\poi-3.11-beta2.jar" size="2054958" download="eager" />
+    <jar href="libs\poi-ooxml-3.11-beta2.jar" size="1111398" download="eager" />
+    <jar href="libs\poi-ooxml-schemas-3.11-beta2.jar" size="5161257" download="eager" />
+    <jar href="libs\sqlite-jdbc-3.8.11.2.jar" size="5575351" download="eager" />
+    <jar href="libs\stax-api-1.0.1.jar" size="26514" download="eager" />
+    <jar href="libs\xbean-reflect-3.4.jar" size="133826" download="eager" />
+    <jar href="libs\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+    <jar href="libs\xmlworker-5.5.9-javadoc.jar" size="1158391" download="eager" />
+    <jar href="libs\xmlworker-5.5.9-sources.jar" size="368873" download="eager" />
+    <jar href="libs\xmlworker-5.5.9.jar" size="251792" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="app.MainApp"  name="ForkLift WMS" />
+  <update check="background"/>
+</jnlp>
